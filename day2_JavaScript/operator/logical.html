@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #000;
+            color : #fff;
+            text-align: center;
+        }
+        a{
+            text-decoration: none;
+            font-size: 20px;
+            color: aqua;
+            text-transform: capitalize;
+            padding: 10px;
+        }
+        h2{
+            color: aliceblue;
+            font-size: 35px;
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript</h1>
+    <div>
+        <a href="./index.html">arithmetic</a>
+        <a href="./assignment.html">assignment</a>
+        <a href="./comparison.html">comparison</a>
+        <a href="./logical.html">logical</a>
+        <a href="./string.html">string</a>
+        <a href="./inc_dec.html">inc-dec</a>
+    </div>
+    <h2>Logical</h2>
+    <p> && , || , !</p>
+</body>
+<script>
+
+    let abc = 11;
+    let sum = 10;
+
+    console.log("if both condtion are same than in &&")
+    let total = abc == 11 && sum == 10 ? console.log("there are equal"): console.log("not equal");
+    console.log("----------------------------------");
+
+    sum =19
+    console.log("if one condtion are not same than in &&")
+    total = abc == 11 && sum == 10 ? console.log("there are equal"): console.log("not equal");
+    console.log("----------------------------------");
+
+    console.log("if one condtion are not same than in ||")
+    total = abc == 11 || sum == 10 ? console.log("there are equal"): console.log("not equal");
+    console.log("----------------------------------");
+    
+    console.log("if both condtion are not same than in || ")
+    total = abc == 10 || sum == 10 ? console.log("there are equal"): console.log("not equal");
+    console.log("----------------------------------");
+
+    total = abc != 10  ? console.log("there are equal"): console.log("not equal");
+    
+</script>
+</html>
