@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+    // check age 
+
+    // let age = 8;
+
+    // if(age<18){
+    //     console.log("you are not adult")
+    // }
+    // else if(age>=18){
+    //     console.log("you are adult");
+    // }
+    // else{
+    //     console.log("not a vaild number")
+    // }
+
+    // console.log("----------------------------------------")
+
+
+// odd even
+
+    // let number = 5;
+
+    // if(number%2==0){
+    //     console.log("even",number);
+    // }
+    // else{
+    //     console.log("odd",number);
+    // }
+
+    // console.log("----------------------------------------")
+
+// divede by 5 and 15
+
+    // let num = 15;
+
+    // switch(true){
+    //     case num%15==0 && num%5==0:
+    //         console.log("divide by 15 and 5");
+    //         break;
+    //     default :
+    //         console.log("not divide");   
+    //         break;
+    // }
+
+    // print 60 number using loop
+
+    // for(let i=1; i<=60; i++){
+    //     if(i%2==0){
+    //         console.log('number ' , i)
+    //     }
+    // }
+
+
+    // fatotial number
+
+    // let n=3;
+    // let  total = 1
+    // for(i=1;i<=n; i++){
+    //     total = i * total;
+    // }
+    // console.log(total)
+
+
+    // table for 19 using loop
+
+    // let numb = parseInt(prompt("enter table number"))
+
+    // console.log(typeof numb)
+    // for(let i=1; i<=10; i++){
+    //     console.log(`${numb} * ${i} = ${numb*i}`)
+        
+    // }
+
+    // check password
+
+    let pin = 1111;
+    let tryMessage = "please make your guess ";
+    let wrongMessage = "sorry that was wrong";
+    let ansMessage = "that was correct"
+    let maxAttempt = 4;
+    // let currentAttempt = 0
+
+    for(let i=1; i<=maxAttempt; i++){
+        let tryNum = parseInt(prompt(tryMessage));
+        if(tryNum === pin){
+            alert(ansMessage );
+            break;
+        }
+        else{
+            alert(wrongMessage)
+            // console.log("try")
+            // break;
+        }
+        
+        // currentAttempt++
+    }
+
+
+
+
+</script>
+</html>
