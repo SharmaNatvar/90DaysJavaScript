@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, sapiente!</p>
+
+</body>
+    <script>
+        let newPara = document.getElementById("para");
+        let newParaString = newPara.innerText; 
+        console.log(newParaString);
+
+        let paraUpper = newParaString.toUpperCase();
+        console.log(paraUpper);
+
+        let paraLocal = newParaString.toLowerCase();
+        console.log(paraLocal);
+
+        let paraSplit = newParaString.split(" ");
+        console.log(paraSplit);
+
+        let paraJoin = "("+paraSplit.join(")(")+")";
+        console.log(paraJoin);
+
+        let paraSlice = paraSplit.slice(1,5);
+        console.log(paraSlice);
+
+        let paraSub = newParaString.substr(2);
+        console.log(paraSub);
+    </script>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>user-input</title>
+</head>
+<body>
+    <h2> your name is :</h2>
+    <h1 id="name"> </h1>
+    <p>using string method</p>
+    <h3 id="lower"></h3>
+    <h3 id="firstSlice"></h3>
+    <h3 id="lastSlice"></h3>
+</body>
+<script>
+    let userName = prompt("enter your name"); 
+    document.getElementById('name').innerText = userName.toLocaleUpperCase();
+
+    document.getElementById('lower').innerText = userName;
+    let userSplit = userName.split(' '); 
+    document.getElementById('firstSlice').innerText = "this is your first name = "+userSplit.slice(0 , 1); 
+    document.getElementById('lastSlice').innerText = "this is your last name = "+userSplit.slice(1 , 2); 
+
+
+</script>
+</html>
