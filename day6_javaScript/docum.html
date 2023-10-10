@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="title">hello bro </h1>
+    <p>change with javaScript</p>
+    <button onclick="changeName()">change name</button>
+    <hr/>
+    <h1 id="age">hello bro </h1>
+    <p>use </p>
+    <button onclick="changeAge()">change age</button>
+</body>
+<script>
+    let userId = document.getElementById('title')
+    
+    function changeName() {
+        let user = prompt("enter your name ");
+
+        userId.innerHTML = ` ${user}`;
+    }
+
+    let userAge = document.getElementById('age');
+
+    function changeAge(){
+        let insertAge = prompt("enter your age");
+
+        userAge.innerHTML = insertAge;
+    }
+</script>
+</html>

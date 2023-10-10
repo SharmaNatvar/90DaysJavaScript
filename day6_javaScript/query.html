@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p> hello bro this is query Seleter</p>
+    <span>hay bro this is span</span>       
+    <div id="paraDetail">
+        <p>hay </p>
+        <span>f h</span>
+    </div>
+
+</body>
+<script>
+
+    let paraChange = document.querySelector('p')
+    paraChange.innerHTML='change para by tage name p'
+
+    let spanDetail = document.querySelector("span");
+    spanDetail.innerHTML= "hay this is change by tag name span"
+
+    let paraDetail = document.querySelector("#paraDetail");
+    paraDetail.innerHTML= "change para detail by id paraDetail";
+
+    // let spanPara = paraDetail.querySelector("span");
+    // spanPara.innerText = "this is change by tag name but using parent element"
+
+</script>
+</html>
