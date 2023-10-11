@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Trip Calculator </h1>
+    <div>
+        <label>Enter Your Trip Distance : </label>
+        <input type="number" id="distance" placeholder="100"/>
+    </div>
+    <div>
+        <label>Enter Current Petrol Price : </label>
+        <input type="number" id="petrolPrices" placeholder="100"/>
+    </div>
+    <div>
+        <label>Enter your Trip Bike Milage : </label>
+        <input type="number" id="milage" placeholder="100"/>
+    </div>
+    <div>
+        <label>Enter your Trip other expenses : </label>
+        <input type="number" id="otherExp" placeholder="100"/>
+    </div>
+    <div>
+        <label>Enter your Trip total members number : </label>
+        <input type="number" id="person" placeholder="100"/>
+    </div>
+    <button type="submit" onclick="tripCalc()">Submit</button>
+
+    <h5>total Trip Cost : <span id="tripTotalCost"> </span></h5>
+    <h5>total Trip Per Person Cost : <span id="tripPerPersonCost"> </span></h5>
+
+</body>
+<script>
+    function tripCalc(){
+        let distance = parseInt(document.getElementById('distance').value);
+        let petrolPrices = parseInt(document.getElementById('petrolPrices').value);
+        let milage = parseInt(document.getElementById('milage').value);
+        let otherExp = parseInt(document.getElementById('otherExp').value);
+        let person = parseInt(document.getElementById('person').value);
+
+        // console.log(typeof distance );
+
+        try {
+            if( distance && petrolPrices && milage && otherExp && person){
+                let cost = (distance/milage)*petrolPrices;
+
+                let totalCost = cost + otherExp;
+                document.getElementById('tripTotalCost').innerHTML = totalCost;
+                
+                let perPersonCost = totalCost/person;
+                document.getElementById('tripPerPersonCost').innerHTML = perPersonCost;
+
+                // console.log(perPersonCost);
+            }
+            else{
+                throw "enter vaild number"
+            }
+        } catch (error) {
+            alert(error)
+        }
+    }
+
+
+
+</script>
+</html>
