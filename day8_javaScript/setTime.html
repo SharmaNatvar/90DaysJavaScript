@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // function scop
+    // when we declare any variable in function scop with the help of var than it is only accessble with in function
+    // use of var
+    var user = "krishna";
+
+    function userName(){
+        var user = "sharma";
+        console.log(user, "use of var in function");
+    }
+
+    console.log(user,"use of var");
+
+    userName();
+    console.log("----------------------");
+
+    // ----------------------
+    // change the function name
+
+    let user1 = "ram";
+
+    function userName1(){
+        let user1 = "shyam";
+        console.log(user1, "use of let in function");
+    }
+    console.log(user1, "use of let");
+    userName1();
+    console.log("----------------------");
+
+
+    // block scop
+
+    var name = "radhey";
+
+    if(true){
+        var name = "kisori"
+        console.log(name, "use of var in block scop");
+    }
+    console.log(name, "use of var in block scop");
+
+    console.log("----------------------");
+// ----------------------
+    let nameLet = "radhey";
+
+    if(true){
+        let nameLet = "kisori"
+        console.log(nameLet , "use of let in block scop");
+    }
+    console.log(nameLet , "use of let in block scop");
+
+</script>
+</html>
