@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1><a href="index.html">first file</a></h1>
+    <h2><a href="cal.html">calculat0r</a></h2>    
+
+    <input type="number" id="firstNum">
+    <select id="opt">
+        <option >select option</option>
+        <option value="+">+ Add</option>
+        <option value="-">- sub</option>
+        <option value="*">* multi</option>
+        <option value="/">/ div</option>
+    </select>
+    <input type="number" id="secNum">
+    <button type="submit" onclick="cal()">submit</button>
+
+    <h2 id="showSum"></h2>
+</body>
+<script>
+    function cal(){
+        let firstNum = parseInt(document.getElementById('firstNum').value)
+        let opt = document.getElementById('opt').value;
+        let secNum = parseInt(document.getElementById('secNum').value);
+        
+        console.log(typeof(firstNum));
+        console.log(typeof(secNum));
+        let sum 
+        // let sum = (firstNum,opt,secNum) =>{
+
+        //     let totalsum = (firstNum) (opt) (secNum)
+        //     console.log(totalsum, 'totalsum');
+        // }
+        switch(opt){
+            case '+':
+                sum = firstNum + secNum;
+                console.log(sum , "sum");
+                break;
+
+            case '-':
+                sum = firstNum - secNum;
+                console.log(sum , "sum");
+                break;
+
+            case '*':
+                sum = firstNum * secNum;
+                console.log(sum , "sum");
+                break;
+
+            case '/':
+                sum = firstNum / secNum;
+                console.log(sum , "sum");
+                break;
+            
+            default:
+                alert("enter valid input");
+        }
+        // console.log(sum , "sum");
+        document.getElementById('showSum').innerHTML = ` ${firstNum} ${opt} ${secNum} = ${sum}`
+    }
+    
+</script>
+</html>

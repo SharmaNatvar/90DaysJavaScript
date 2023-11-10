@@ -4,8 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .form{
+            display: flex;
+            flex-direction: column;
+            width: 500px;
+            height: 300px;
+            align-items: center;
+            /* justify-content: space; */
+        }
+        .form input{
+            margin: 10px 0;
+            font-size: 20px;
+            padding: 10px 20px;
+            width: 400px;
+        }
+        .form button{
+            font-size: 20px;
+            padding: 10px 20px;
+            min-width: 150px;
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="form">
+        <input type="text" class="userName" placeholder="Enter your name"/>
+        <input type="password" class="userPass" placeholder="Enter your password"/>
+        <div class="btn">
+            <button type="button" onclick="showPass(this)">Show Password</button>
+            <button type="submit">submit</button>
+        </div>
+    </div>
 </body>
+<script>
+    // let btn = document.getElementsByClassName('btn')[0]
+    let userPass = document.getElementsByClassName('userPass')[0]
+    function showPass(elem){
+        let userAlt = userPass.getAttribute('type')
+
+        if(userAlt == 'password'){
+            userPass.setAttribute('type','text');
+            elem.innerText = 'Hide Password'
+        }
+        else{
+            userPass.setAttribute('type','password');
+            elem.innerText = 'show Password'
+
+        }
+    }
+
+</script>
 </html>

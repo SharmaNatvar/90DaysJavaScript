@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>from input</h1>
+    <h2><a href="cal.html">calculat0r</a></h2>
+    <input type="text" id="userfName"/>
+    <input type="text" id="userlName"/>
+    <button type="submit" onclick="nameCall()">click</button>
+    <h1 class="userName"></h1>
+  </body>
+  <script>
+    function nameCall(){
+        let userfName = document.getElementById('userfName').value
+        let userlName = document.getElementById('userlName').value
+        console.log(userfName,'userName')
+        console.log(userlName,'userName')
+        if(userfName && userlName ){
+
+            document.getElementsByClassName('userName')[0].innerHTML = "hello "+ userfName +' '+userlName
+
+        }
+        else{
+            alert('enter vaild input')
+
+        }
+
+        document.getElementById('userfName').value=" "
+        document.getElementById('userlName').value=" "
+
+    }
+  </script>
+</html>

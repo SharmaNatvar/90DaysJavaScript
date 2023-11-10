@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button type="button" onclick="dateToday()">Date</button>
+    <button type="button" onclick="year()">Year</button>
+    <button type="button" onclick="month()">month</button>
+    <button type="button" onclick="day()">Day</button>
+    <button type="button" onclick="hour()">hour</button>
+    <button type="button" onclick="mint()">Minutes</button>
+    <button type="button" onclick="sec()">second</button>
+    <button type="button" onclick="utcDate()">UTC Date</button>
+    <button type="button" onclick="utcHours()">UTC Hours</button>
+    <h1 id="result"></h1>
+  </body>
+  <script>
+    let a = 10;
+    console.log(a);
+
+    let date = new Date();
+
+    function dateToday() {
+      document.getElementById('result').innerText = date
+    }
+    
+    function year() {
+      document.getElementById('result').innerText = date.getFullYear();
+    }
+    
+    function month() {
+      let month = ["January","Feburay",'March','April','May','June','July','August','September','October','November','Decmber']
+      document.getElementById('result').innerText = month[date.getMonth()];
+    }
+
+    function day() {
+      let month = ["Sunday","Monday",'Tuesday','Wednesday','Thurday','Friday','Saturday']
+      document.getElementById('result').innerText = month[date.getDay()];
+    }
+
+    function hour() {
+      document.getElementById('result').innerText = date.getHours();
+    }
+    
+    function mint() {
+      document.getElementById('result').innerText = date.getMinutes();
+    }    
+   
+    function sec() {
+      document.getElementById('result').innerText = date.getSeconds();
+    }   
+    
+    function secMili() {
+      document.getElementById('result').innerText = date.getMilliseconds();
+    }
+    
+    function time() {
+      document.getElementById('result').innerText = date.getTime();
+    }    
+    
+    function timeZone() {
+      document.getElementById('result').innerText = date.getTimezoneOffset();
+    }
+    
+    function utcDate() {
+      document.getElementById('result').innerText = date.getUTCDate();
+    }
+
+    function utcHours() {
+      document.getElementById('result').innerText = date.getUTCHours();
+    }
+
+
+    
+  </script>
+</html>

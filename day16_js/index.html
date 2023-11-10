@@ -8,4 +8,19 @@
 <body>
     
 </body>
+<script>
+    let num = parseInt(prompt('enter your pattern number'))
+    for(let i=1; i<=num; i++){
+        for(let j=1; j<=i; j++){
+            document.write('*');
+        }
+        document.write('<br/>')
+    }
+    for(let i = num; i>=1;i--){
+        for(let j = 1; j<i;j++){
+            document.write('*')
+        }
+        document.write('<br/>')
+    }
+</script>
 </html>

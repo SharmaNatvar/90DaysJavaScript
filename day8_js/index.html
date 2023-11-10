@@ -4,8 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        #red{
+            color: red;
+        }
+        #black{
+            color: yellowgreen;
+        }
+        
+    </style>
 </head>
 <body>
-    
+    <h1 class="cls" id="red">krishna Sharma</h1>
+    <button type="button" onclick="change()">click</button>
 </body>
+<script>
+    let cls = document.getElementsByClassName('cls')[0]
+    function change(){
+        let eleId = cls.getAttribute('id')
+        console.log(eleId);
+        
+        if(eleId == 'red'){
+            cls.setAttribute('id','black')
+        }else{
+            cls.setAttribute('id','red')
+        }
+
+    }
+</script>
 </html>

@@ -4,8 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        #black{
+            background-color: black;
+            height: 500px;
+            width: 500px;
+            position: relative;
+        }
+        #red{
+            background-color: red;
+            height: 50px;
+            width: 50px;
+            position: absolute;
+            top: 0px;
+        }
+        button{
+            padding: 10px 20px;
+            font-size: 20px;
+            /* width: 50px; */
+        }
+    </style>
 </head>
 <body>
-    
+    <div id="black">
+        <div id="red">
+
+        </div>
+    </div>
+    <button onclick="move()">Move</button>
 </body>
+<script>
+    function move(){
+        let red = document.getElementById('red')
+        let position = 0
+        let anime = setInterval(boxMove,10)
+
+        function boxMove(){
+            position++
+            if(position == 450){
+                clearInterval(anime)
+            }
+            else{
+                red.style.top = position+'px' 
+                red.style.left = position+'px' 
+            }
+        }
+    }
+</script>
 </html>

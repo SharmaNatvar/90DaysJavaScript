@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="getTodayTime()">
+    <h1 style="text-align: center;"></h1>
+</body>
+<script>
+    function getTodayTime(){
+        let hour = new Date().getHours();
+        let minute = new Date().getMinutes();
+        let second = new Date().getSeconds();
+        
+        let amPM = (hour<12)?"AM":"PM";
+        
+        if(hour > 12){
+            hour = hour - 12
+        }
+
+        minute = (minute < 10)? 0 +""+ minute : minute 
+        second = (second < 10)? 0 +""+ second : second 
+        // console.log(hour+" : "+minute +" : "+ second)
+        document.getElementsByTagName('h1')[0].innerHTML = hour+" : "+minute +" : "+ second +" "+amPM
+        setInterval(getTodayTime,1000)
+    }
+    // getTodayTime()
+</script>
+</html>
