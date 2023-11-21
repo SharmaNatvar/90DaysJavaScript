@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>day28</title>
+    <style>
+        body{
+            background: #000;
+        }
+    </style>
+</head>
+<body>
+    <!--11-11-2023  -->
+</body>
+<script>
+    let fruits = ["apple",'mango','grapes','banana'];
+    let fruits2 = []
+    for(let i = 0; i<fruits.length; i++){
+        fruits2.push(fruits[i].toLocaleUpperCase());
+    }
+    console.log(fruits2);
+
+    console.log('-----------------------------------');
+    console.log('for..of');
+
+    for (const fruit of fruits2) {
+        console.log(fruit.toLocaleLowerCase());
+    }
+    // console.log(fruit);
+
+    console.log('-----------------------------------');
+    console.log('for..in');
+
+    for(const index in fruits2){
+        console.log(fruits2[index]);
+    }
+
+
+</script>
+</html>

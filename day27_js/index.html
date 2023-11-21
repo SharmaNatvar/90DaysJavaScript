@@ -3,9 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>day27</title>
 </head>
+<style>
+    body{
+        background: #000;
+    }
+</style> 
 <body>
-    
+    <h4>array  destructuring</h4>
 </body>
+<script>
+    const nameFirst = ['krishna','shyam','ram','radhey', 'radheyShyam'];
+    console.log(nameFirst);
+
+    let [firstName,secName, ,fourName,...restName  ] = nameFirst;
+
+    console.log(firstName);
+    console.log(secName);
+    console.log(fourName);
+    console.log(restName);
+</script>
 </html>
