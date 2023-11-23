@@ -14,3 +14,22 @@ let vowels = (msg) =>{
 let vowelsCount = vowels('natvarsharmanhi')
 
 console.log(vowelsCount);
+
+// -----------------------------------------
+
+console.log('-----------------------------------------');
+console.log('2nd method');
+
+function vowelsNew(arr,target) {
+    // console.log(typeof arr);
+    // console.log(arr.length);
+    for(let i = 0; i<arr.length; i++){
+        if(arr[i]==target){
+            return i
+        }
+    }
+    return '-1'
+}
+
+let returnValue = vowelsNew(['helo','krishna'],'e')
+console.log(returnValue);
